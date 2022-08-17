@@ -5,11 +5,11 @@ import plotly.graph_objects as go
 
 # emojis: https://www.webfx.com/tools/emoji-cheat-sheet/
 st.set_page_config(page_title="Dashboard", page_icon=":bar_chart:", layout="wide")
-st.title("LHN Dashboard")
-st.markdown("The dashboard will help a researcher to get to know \
-more about the given datasets and it's output")
-st.sidebar.title("Select Visual Charts")
-st.sidebar.markdown("Select the Charts/Plots accordingly:")
+st.title("Dashboard")
+#st.markdown("The dashboard will help a researcher to get to know \
+#more about the given datasets and it's output")
+#st.sidebar.title("Select Visual Charts")
+#st.sidebar.markdown("Select the Charts/Plots accordingly:")
 
 # ---- READ EXCEL ----
 # @st.cache
@@ -131,13 +131,13 @@ if uploaded_file is not None:
     # st.plotly_chart(fig2)
     #fig2.show()
 
-    left_column, middle_column = st.columns(2)
-    with left_column:
-        st.subheader("Total Products Count:")
-        st.subheader(f" {totalfiltercount:,}")
-    with middle_column:
-        st.subheader("Data shown :")
-        st.subheader(f"{percent}", "%")
+    # left_column, middle_column = st.columns(2)
+    # with left_column:
+    #     st.subheader("Total Products Count:")
+    #     st.subheader(f" {totalfiltercount:,}")
+    # with middle_column:
+    #     st.subheader("Data shown :")
+    #     st.subheader(f"{percent}", "%")
 
     st.header("Pie chart")
     st.plotly_chart(fig1)
